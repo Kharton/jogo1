@@ -1,0 +1,13 @@
+# Created by https://www.gitignore.io/api/godot
+
+### Godot ###
+.mono/
+export_presets.cfg
+
+assets/
+bin/
+addons/
+*.psd
+
+
+# End of https://www.gitignore.io/api/godot
