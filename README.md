@@ -1,4 +1,4 @@
-# Tiny Platform Quest
+# A maldição do mago
 
 This game is a made with the **Godot engine**, for learning purposes.
 
