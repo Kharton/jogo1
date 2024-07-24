@@ -4,7 +4,7 @@ var tile_size:int = 32
 var file:File = File.new()
 var file_path:String
 var level_index:int = 0
-var level_max:int = 10
+var level_max:int = 11
 var scene_name:String = "boot"
 var dead_scene:PackedScene = preload("res://scenes/dead.tscn")
 var rewind_scene:PackedScene = preload("res://scenes/rewind.tscn")
