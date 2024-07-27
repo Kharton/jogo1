@@ -7,7 +7,7 @@ func _ready() -> void:
 	GLOBAL.change_music("music_title_desc", .1)
 
 	# scroll
-	$tween_scroll.interpolate_property($scrolling, "position", Vector2(0, 320), Vector2(0, -288), 30, Tween.TRANS_LINEAR, 0)
+	$tween_scroll.interpolate_property($scrolling, "position", Vector2(0, 320), Vector2(0, -288), 15, Tween.TRANS_LINEAR, 0)
 	$tween_scroll.start()
 
 	$player.freeze()
@@ -22,5 +22,12 @@ func _process(delta:float) -> void:
 		var right:bool = Input.is_action_just_pressed("ui_right")
 
 		if up || down || left || right:
-			GLOBAL.change_music("music_level")
-			GLOBAL.next_scene("level", .5, .25)
+			endScene()
+
+
+func _on_timer_timeout():
+	endScene()
+
+func endScene():
+	GLOBAL.change_music("music_level")
+	GLOBAL.next_scene("level", .5, .25)

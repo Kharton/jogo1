@@ -181,6 +181,7 @@ anims/walk_right = SubResource( 9 )
 position = Vector2( 16, -16 )
 
 [node name="label" type="Label" parent="claim"]
+visible = false
 margin_right = 200.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 10 )

@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/title_desc.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=2]
-[ext_resource path="res://scenes/warrior.tscn" type="PackedScene" id=3]
 [ext_resource path="res://gfx/title_scroll.png" type="Texture" id=4]
 [ext_resource path="res://fonts/pixelart.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://scenes/princess.tscn" type="PackedScene" id=6]
@@ -27,9 +26,6 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 0, 7, 4, 17, 7, 3, 65536, 7, 65540, 65553, 7, 65539, 131072, 2, 0, 131073, 10, 1, 131074, 2, 0, 131075, 10, 1, 131076, 10, 1, 131077, 10, 1, 131078, 10, 1, 131079, 2, 0, 131080, 2, 0, 131081, 2, 0, 131082, 10, 1, 131083, 10, 1, 131084, 10, 1, 131085, 2, 0, 131086, 2, 0, 131087, 10, 1, 131088, 2, 0, 131089, 2, 0, 196608, 2, 196609, 196609, 2, 196609, 196610, 2, 2, 196611, 2, 196609, 196612, 2, 196609, 196613, 2, 196609, 196614, 2, 196609, 196615, 2, 196612, 196616, 2, 196612, 196617, 2, 196609, 196618, 2, 196612, 196619, 2, 196609, 196620, 2, 196612, 196621, 2, 196612, 196622, 2, 196612, 196623, 2, 196612, 196624, 2, 65537, 196625, 2, 196609, 262144, 2, 196612, 262145, 2, 196612, 262146, 2, 196612, 262147, 2, 196612, 262148, 2, 196612, 262149, 2, 196612, 262150, 2, 196612, 262151, 2, 196612, 262152, 2, 196612, 262153, 2, 196612, 262154, 2, 196612, 262155, 2, 196612, 262156, 2, 196612, 262157, 2, 196612, 262158, 2, 196612, 262159, 2, 196612, 262160, 2, 196612, 262161, 2, 196612, 327680, 2, 196612, 327681, 2, 196612, 327682, 2, 196609, 327683, 2, 196612, 327684, 2, 196612, 327685, 2, 196612, 327686, 2, 196612, 327687, 2, 196612, 327688, 2, 196612, 327689, 2, 196612, 327690, 2, 196612, 327691, 2, 196612, 327692, 2, 196612, 327693, 2, 196612, 327694, 2, 196612, 327695, 2, 196612, 327696, 2, 196612, 327697, 2, 196612, 393216, 2, 5, 393217, 2, 196612, 393218, 2, 196612, 393219, 2, 196612, 393220, 2, 196612, 393221, 2, 196612, 393222, 2, 196609, 393223, 2, 196609, 393224, 2, 196612, 393225, 2, 196612, 393226, 2, 196612, 393227, 2, 196612, 393228, 2, 196612, 393229, 2, 196609, 393230, 2, 65541, 393231, 2, 196612, 393232, 2, 196612, 393233, 2, 196612, 458752, 2, 196609, 458753, 2, 196612, 458754, 2, 196612, 458755, 2, 65541, 458756, 2, 196612, 458757, 2, 196612, 458758, 2, 196612, 458759, 2, 196609, 458760, 2, 196609, 458761, 2, 196612, 458762, 2, 196612, 458763, 2, 196612, 458764, 2, 196612, 458765, 2, 196612, 458766, 2, 196612, 458767, 2, 196612, 458768, 2, 196612, 458769, 2, 196609, 524288, 2, 196609, 524289, 2, 196609, 524290, 2, 65541, 524291, 2, 196612, 524292, 2, 196612, 524293, 2, 196612, 524294, 2, 196612, 524295, 2, 196612, 524296, 2, 196612, 524297, 2, 196612, 524298, 2, 196612, 524299, 2, 196612, 524300, 2, 196612, 524301, 2, 196612, 524302, 2, 196612, 524303, 2, 196612, 524304, 2, 65541, 524305, 2, 196609, 589824, 2, 196609, 589825, 2, 196609, 589826, 2, 196609, 589827, 2, 196609, 589828, 2, 196612, 589829, 2, 196612, 589830, 2, 196612, 589831, 2, 196612, 589832, 2, 196612, 589833, 2, 196612, 589834, 2, 196612, 589835, 2, 196612, 589836, 2, 196612, 589837, 2, 196612, 589838, 2, 196612, 589839, 2, 196612, 589840, 2, 196612, 589841, 2, 196612 )
 
-[node name="warrior" parent="." instance=ExtResource( 3 )]
-position = Vector2( 288, 48 )
-
 [node name="light2D" type="Light2D" parent="."]
 position = Vector2( 288, 160 )
 texture = ExtResource( 4 )
@@ -51,30 +47,14 @@ light_mask = 2
 margin_right = 576.0
 margin_bottom = 354.0
 custom_fonts/font = SubResource( 1 )
-text = "Once upon a time,
-10 Seconds Knight fell in lowe
-with a Princess.
+text = "Um  poderoso mago foi amaldiçoado
+durante suas aventuras  
 
-The evil wizard also liked
-the Princess and became jealous
-of 10 Second knight.
+vivendo apenas 30 segundos
+ sem sentir seu corpo se desfazer
 
-To win the girl, the wizard kidnapped
-her and cursed the knight.
-
-You must rescue the Princess!
-
-You have 10 seconds to complete
-each level before the wizard's curse
-vapourises you.
-
-
-
-
-
-
-Use arrow keys to move in game.
-Use Esc key for menu."
+Ele deve encontrar a feiticeira que o 
+amaldiçoou para se livrar desse destino"
 align = 1
 valign = 3
 
@@ -85,3 +65,9 @@ position = Vector2( 192, 48 )
 
 [node name="player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 384, 48 )
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 14.0
+autostart = true
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
