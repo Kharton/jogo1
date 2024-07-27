@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/trigger_texto.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/exit.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/mage.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=6]
@@ -34,11 +35,14 @@ position = Vector2( 16, 48 )
 initialy = 48
 
 [node name="env_foreground" type="TileMap" parent="."]
-visible = false
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 458757, 7, 65542, 458762, 7, 65541 )
+tile_data = PoolIntArray( 327695, 7, 5 )
 
 [node name="hud" parent="." instance=ExtResource( 6 )]
+
+[node name="trigger" parent="." instance=ExtResource( 2 )]
+position = Vector2( 143, 277 )
+scale = Vector2( 4.5, 1 )

@@ -181,7 +181,7 @@ anims/walk_right = SubResource( 9 )
 position = Vector2( 16, -16 )
 
 [node name="label" type="Label" parent="claim"]
-margin_right = 64.0
+margin_right = 200.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 10 )
 text = "Desistir nunca foi uma possibilidade"
@@ -196,3 +196,17 @@ autostart = true
 position = Vector2( 17, 0 )
 
 [node name="position2D" type="Position2D" parent="node2D"]
+
+[node name="tutorial" type="Node2D" parent="."]
+position = Vector2( 16, -29 )
+
+[node name="label" type="Label" parent="tutorial"]
+margin_right = 200.0
+margin_bottom = 34.0
+rect_scale = Vector2( 0.5, 0.5 )
+autowrap = true
+uppercase = true
+
+[node name="timer" type="Timer" parent="tutorial"]
+
+[connection signal="timeout" from="tutorial/timer" to="." method="_on_timer_timeout"]

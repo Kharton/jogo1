@@ -159,3 +159,7 @@ func shoot_loop() -> void:
 
 	if shoot:
 		shoot()
+
+
+func _on_timer_timeout():
+	$tutorial/label.visible=false
